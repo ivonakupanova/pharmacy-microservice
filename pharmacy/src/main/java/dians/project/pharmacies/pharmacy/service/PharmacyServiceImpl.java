@@ -33,7 +33,7 @@ public class PharmacyServiceImpl implements PharmacyService {
         List<Pharmacy> pharmacies = this.pharmacyRepository.findAllByMunicipalityId(id);
 
         Municipality municipality =
-                restTemplate.getForObject("https://municipality-microservice-code.herokuapp.com/pharmacies/" +
+                restTemplate.getForObject("https://municipality-microservice-code.herokuapp.com:9091/pharmacies/" +
                         "getMunicipality/" + id,
                 Municipality.class);
 
